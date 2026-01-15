@@ -42,12 +42,17 @@
             background-color: #4495cb;
         }
 
-        /* Flexbox 적용하여 간격 조절 */
+/* Grid 적용 */
         .container {
-            display: flex;
+            display: grid;  /* flex 대신 grid 사용 */
+            
+            /* 500px 너비의 기둥(컬럼)을 2개 만듭니다 */
+            grid-template-columns: 500px 500px;
+            
+            /* 만들어진 그리드 덩어리 전체를 화면 가운데에 둡니다 */
             justify-content: center;
-            gap: 30px; /* 박스 사이의 간격 설정 */
-            flex-wrap: wrap; /* 화면이 작아질 경우 줄 바꿈 */
+            
+            gap: 30px;
         }
     </style>
     <title>링크 박스 예제</title>
@@ -112,6 +117,7 @@
     </div>
     <div class="section">
         <div class="container">
+            <a href="https://github.com/SCALAR-Lab/Seminar/tree/main/2026" class="annual">2026</a>
             <a href="https://github.com/SCALAR-Lab/Seminar/tree/main/2025" class="annual">2025</a>
             <a href="https://github.com/SCALAR-Lab/Seminar/tree/main/2024" class="annual">2024</a>
         </div>
